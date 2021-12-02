@@ -11,10 +11,10 @@
 
 	/** private **/
 	void	Account::_displayTimestamp( void ){
-		std::cout << "[19920104_091532] ";
-		// time_t now = time(0);
-		// tm *ltm = localtime(&now);
-		// std::cout << "[" << ltm->tm_year + 1900 << std::setfill('0') << std::setw(2) << ltm->tm_mon + 1 << std::setw(2) << ltm->tm_mday << "_" << std::setw(2) << ltm->tm_hour << std::setw(2) << ltm->tm_min << std::setw(2) << ltm->tm_sec << "] ";
+		// std::cout << "[19920104_091532] ";
+		time_t now = time(0);
+		tm *ltm = localtime(&now);
+		std::cout << "[" << ltm->tm_year + 1900 << std::setfill('0') << std::setw(2) << ltm->tm_mon + 1 << std::setw(2) << ltm->tm_mday << "_" << std::setw(2) << ltm->tm_hour << std::setw(2) << ltm->tm_min << std::setw(2) << ltm->tm_sec << "] ";
 	}
 
 	/** public **/

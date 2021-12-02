@@ -1,4 +1,4 @@
-NAME := test_acountcpp
+NAME := test_acountcpp.out
 CC := g++
 
 CFLAGS ?= -Wall -Werror -Wextra
