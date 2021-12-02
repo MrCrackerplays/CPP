@@ -7,10 +7,7 @@ CFLAGS := -g $(CFLAGS)
 endif
 OBJECTS := Account.o tests.o
 OBJECTS := $(addprefix obj/,$(OBJECTS))
-INCLUDE := headers
-INCLUDE := $(addprefix -I,$(INCLUDE))
 HEADER_FILES := Account.hpp
-HEADER_FILES := $(addprefix headers/,$(HEADER_FILES))
 
 all: $(NAME)
 
@@ -19,7 +16,7 @@ $(NAME): $(OBJECTS)
 
 obj/%.o: %.cpp $(HEADER_FILES)
 	@mkdir -p obj
-	@$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJECTS)
