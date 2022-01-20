@@ -1,7 +1,7 @@
 NAME := karenFilter
 CC := g++
 
-CFLAGS ?= #-Wall -Werror -Wextra
+CFLAGS ?= -Wall -Werror -Wextra
 ifdef DEBUG
 CFLAGS := -g $(CFLAGS)
 endif
