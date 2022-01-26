@@ -1,7 +1,7 @@
 NAME := unnecessary_violence
-CC := g++
+CC := c++
 
-CFLAGS ?= -Wall -Werror -Wextra
+CFLAGS ?= -Wall -Werror -Wextra -std=c++98
 ifdef DEBUG
 CFLAGS := -g $(CFLAGS)
 endif
