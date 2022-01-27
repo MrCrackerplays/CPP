@@ -83,11 +83,11 @@ bool Fixed::operator!=(Fixed const & rhs) {
 }
 
 Fixed Fixed::operator+(Fixed const & rhs) {
-	return (Fixed(this->value + rhs.value));
+	return (Fixed(this->toInt() + rhs.toInt()));
 }
 
 Fixed Fixed::operator-(Fixed const & rhs) {
-	return (Fixed(this->value - rhs.value));
+	return (Fixed(this->toInt() - rhs.toInt()));
 }
 
 Fixed Fixed::operator*(Fixed const & rhs) {
