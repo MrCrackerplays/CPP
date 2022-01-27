@@ -83,11 +83,15 @@ bool Fixed::operator!=(Fixed const & rhs) {
 }
 
 Fixed Fixed::operator+(Fixed const & rhs) {
-	return (Fixed(this->toInt() + rhs.toInt()));
+	Fixed	new_value;
+	new_value.setRawBits(this->value + rhs.value);
+	return (new_value);
 }
 
 Fixed Fixed::operator-(Fixed const & rhs) {
-	return (Fixed(this->toInt() - rhs.toInt()));
+	Fixed	new_value;
+	new_value.setRawBits(this->value - rhs.value);
+	return (new_value);
 }
 
 Fixed Fixed::operator*(Fixed const & rhs) {
