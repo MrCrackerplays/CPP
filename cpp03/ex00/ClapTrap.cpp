@@ -51,7 +51,3 @@ void	ClapTrap::beRepaired(unsigned int amount) {
 	this->energy_points--;
 	this->hit_points += amount;
 }
-
-unsigned int ClapTrap::gethp(void) {
-	return this->hit_points;
-}
