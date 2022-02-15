@@ -1,22 +1,9 @@
 #include <iostream>
 
-char	ft_toupper(char c)
-{
-	if ('a' <= c && c <= 'z')
-		return (c - 'a' + 'A');
-	return (c);
-}
-
 char	*ft_capitalize(char *str)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		str[i] = ft_toupper(str[i]);
-		i++;
-	}
+	for (int i = 0; str[i] != '\0'; i++)
+		str[i] = std::toupper(str[i]);
 	return (str);
 }
 
