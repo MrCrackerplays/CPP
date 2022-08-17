@@ -5,7 +5,7 @@ CFLAGS ?= -Wall -Werror -Wextra -std=c++98
 ifdef DEBUG
 CFLAGS := -g $(CFLAGS)
 endif
-OBJECTS := main.o Zombie.o ZombieHorde.o
+OBJECTS := main.o Zombie.o zombieHorde.o
 OBJECTS := $(addprefix obj/,$(OBJECTS))
 #INCLUDE := headers
 #INCLUDE := $(addprefix -I,$(INCLUDE))
