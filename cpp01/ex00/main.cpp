@@ -10,5 +10,5 @@ int	main(void)
 	z->announce();
 	randomChump("Bob");
 	delete z;
-	std::cout << "eind" << std::endl;
+	std::cout << "end" << std::endl;
 }
