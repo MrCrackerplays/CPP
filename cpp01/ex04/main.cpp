@@ -21,7 +21,7 @@ void	local_replace_all(std::string &text, std::string s1, std::string s2)
 int main(int argc, char **argv)
 {
 	if (argc != 4) {
-		std::cout << "invalid amount of arguments, wanted: 3 gotten:" << argc - 1 << std::endl;
+		std::cout << "invalid amount of arguments, wanted: 3 gotten: " << argc - 1 << std::endl;
 		return (0);
 	}
 	std::string	filename = (std::string)argv[1];
