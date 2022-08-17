@@ -18,6 +18,7 @@ int main()
 		club.setType("some other type of club");
 		jim.attack();
 	}
+	// system("leaks unnecessary_violence");
 	/*
 		In which case is it appropriate to store the Weapon as a pointer?
 		HumanB (also HumanA if you save the address of a passed reference, but that's a bit silly
