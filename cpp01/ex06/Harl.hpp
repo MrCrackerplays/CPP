@@ -1,8 +1,8 @@
-#ifndef KAREN_HPP
-# define KAREN_HPP
+#ifndef HARL_HPP
+# define HARL_HPP
 # include <iostream>
 
-class Karen
+class Harl
 {
 private:
 	void debug( void );
@@ -10,8 +10,8 @@ private:
 	void warning( void );
 	void error( void );
 public:
-	Karen(void);
-	~Karen(void);
+	Harl(void);
+	~Harl(void);
 
 	void complain( std::string level );
 };

@@ -1,4 +1,4 @@
-#include "Karen.hpp"
+#include "Harl.hpp"
 
 int	decide_level(int argc, char **argv)
 {
@@ -16,26 +16,26 @@ int	decide_level(int argc, char **argv)
 
 int main(int argc, char **argv)
 {
-	Karen		k = Karen();
+	Harl		h = Harl();
 
 	int	level = decide_level(argc, argv);
 	switch (level)
 	{
 		case 0:
 		std::cout << "[ DEBUG ]" << std::endl;
-		k.complain("DEBUG");
+		h.complain("DEBUG");
 		std::cout << std::endl;
 		case 1:
 		std::cout << "[ INFO ]" << std::endl;
-		k.complain("INFO");
+		h.complain("INFO");
 		std::cout << std::endl;
 		case 2:
 		std::cout << "[ WARNING ]" << std::endl;
-		k.complain("WARNING");
+		h.complain("WARNING");
 		std::cout << std::endl;
 		case 3:
 		std::cout << "[ ERROR ]" << std::endl;
-		k.complain("ERROR");
+		h.complain("ERROR");
 		std::cout << std::endl;
 			break;
 		default:

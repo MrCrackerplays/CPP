@@ -1,15 +1,15 @@
-NAME := karenFilter
+NAME := harlFilter
 CC := c++
 
 CFLAGS ?= -Wall -Werror -Wextra -std=c++98
 ifdef DEBUG
 CFLAGS := -g $(CFLAGS)
 endif
-OBJECTS := main.o Karen.o
+OBJECTS := main.o Harl.o
 OBJECTS := $(addprefix obj/,$(OBJECTS))
 #INCLUDE := headers
 #INCLUDE := $(addprefix -I,$(INCLUDE))
-HEADER_FILES := Karen.hpp
+HEADER_FILES := Harl.hpp
 #HEADER_FILES := $(addprefix headers/,$(HEADER_FILES))
 
 all: $(NAME)
