@@ -9,4 +9,5 @@ int	main(void) {
 	for (int i = 0; i < size; i++)
 		horde[i].announce();
 	delete[] horde;
+	// system("leaks zombino");
 }
