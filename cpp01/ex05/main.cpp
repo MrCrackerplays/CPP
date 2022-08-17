@@ -1,11 +1,12 @@
-#include "Karen.hpp"
+#include "Harl.hpp"
 
 int main(void)
 {
-	Karen k = Karen();
+	Harl h = Harl();
 
-	k.complain("DEBUG");
-	k.complain("ERROR");
-	k.complain("INFO");
-	k.complain("WARNING");
+	h.complain("DEBUG");
+	h.complain("ERROR");
+	h.complain("INFO");
+	h.complain("WARNING");
+	h.complain("banana");
 }
