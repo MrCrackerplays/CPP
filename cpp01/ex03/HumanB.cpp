@@ -1,10 +1,10 @@
 #include "HumanB.hpp"
 
-HumanB::HumanB(std::string name) : _name(name), _weapon(NULL) {
+HumanB::HumanB(std::string name) : name(name), _weapon(NULL) {
 }
 
 HumanB::~HumanB(void) {
-	// std::cout << "HumanB \"" << this->_name << "\" is getting destructed!" << std::endl;
+	// std::cout << "HumanB \"" << this->name << "\" is getting destructed!" << std::endl;
 }
 
 void	HumanB::setWeapon(Weapon& weapon) {
@@ -12,5 +12,5 @@ void	HumanB::setWeapon(Weapon& weapon) {
 }
 
 void	HumanB::attack(void) {
-	std::cout << this->_name << " attacks with his " << this->_weapon->getType() << std::endl;
+	std::cout << this->name << " attacks with his " << this->_weapon->getType() << std::endl;
 }
