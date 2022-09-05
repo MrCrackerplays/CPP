@@ -10,15 +10,17 @@ protected:
 	unsigned int	attack_damage;
 public:
 	/* Canonical */
-	ClapTrap(std::string name);
 	ClapTrap(ClapTrap const & src);
 	~ClapTrap(void);
 	ClapTrap &	operator=(ClapTrap const & rhs);
 
 	/* Specific */
+	ClapTrap(std::string name);
 	void	attack(const std::string& target);
 	void	takeDamage(unsigned int amount);
 	void	beRepaired(unsigned int amount);
+private:
+	ClapTrap(void);
 };
 
 #endif
