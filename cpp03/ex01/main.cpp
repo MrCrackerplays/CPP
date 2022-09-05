@@ -1,7 +1,6 @@
 #include "ScavTrap.hpp"
 
 int	main( void ) {
-	// std::cout << "test1" << std::endl;
 	ScavTrap	a = ScavTrap("Kleppy");
 	ScavTrap	b = ScavTrap(a);
 	ScavTrap	c = b;

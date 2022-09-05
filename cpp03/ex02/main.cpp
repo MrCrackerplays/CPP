@@ -2,7 +2,6 @@
 #include "FragTrap.hpp"
 
 int	main( void ) {
-	// std::cout << "test1" << std::endl;
 	FragTrap	a = FragTrap("Kleppy");
 	FragTrap	b = FragTrap(a);
 	FragTrap	c = b;
