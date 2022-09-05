@@ -1,7 +1,6 @@
 #include "ClapTrap.hpp"
 
 int	main( void ) {
-	// std::cout << "test1" << std::endl;
 	ClapTrap	a = ClapTrap("Kleppy");
 	ClapTrap	b = ClapTrap(a);
 	ClapTrap	c = b;
