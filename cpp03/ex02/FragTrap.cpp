@@ -25,19 +25,15 @@ FragTrap &	FragTrap::operator=(FragTrap const & rhs) {
 }
 
 void	FragTrap::attack(const std::string& target) {
-	if (this->hit_points == 0 || this->energy_points == 0) {
-		// std::cout << "FragTrap Unit " << this->name << " Failed To Attack " << target << ", For " << this->attack_damage << " Points Of Damage, Due To Not Having Enough Energy Points Left!" << std::endl;
+	if (this->hit_points == 0 || this->energy_points == 0)
 		return ;
-	}
 	this->energy_points--;
 	std::cout << "FragTrap Unit " << this->name << " Launches An Attack On " << target << ", Dealing " << this->attack_damage << " Points Of Damage!" << std::endl;
 }
 
 void	FragTrap::takeDamage(unsigned int amount) {
-	if (this->hit_points == 0) {
-		// std::cout << "FragTrap Unit " << this->name << " Was Attacked For " << amount << " Points Of Damage, But Did Not Have Any Hit Points Left!" << std::endl;
+	if (this->hit_points == 0)
 		return ;
-	}
 	std::cout << "FragTrap Unit " << this->name << " Receives " << amount << " Points Of Damage!" << std::endl;
 	if (amount > this->hit_points)
 		this->hit_points = 0;
@@ -46,10 +42,8 @@ void	FragTrap::takeDamage(unsigned int amount) {
 }
 
 void	FragTrap::beRepaired(unsigned int amount) {
-	if (this->hit_points == 0 || this->energy_points == 0) {
-		// std::cout << "FragTrap Unit " << this->name << " Failed To Get Repaired For " << amount << " Hit Points, Due To Not Having Any Energy Points Left!" << std::endl;
+	if (this->hit_points == 0 || this->energy_points == 0)
 		return ;
-	}
 	std::cout << "FragTrap Unit " << this->name << " Gets Repaired For " << amount << " Hit Points!" << std::endl;
 	this->energy_points--;
 	this->hit_points += amount;
