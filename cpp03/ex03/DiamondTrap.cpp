@@ -1,9 +1,9 @@
 #include "DiamondTrap.hpp"
 
 DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), ScavTrap(ClapTrap::name), FragTrap(ClapTrap::name), name(name) {
-	this->hit_points = FragTrap::hit_points;
-	this->energy_points = ScavTrap::energy_points;
-	this->attack_damage = FragTrap::attack_damage;
+	this->hit_points = 100;
+	this->energy_points = 50;
+	this->attack_damage = 30;
 	std::cout << "New DiamondTrap Unit " << name << " Created!" << std::endl;
 }
 
