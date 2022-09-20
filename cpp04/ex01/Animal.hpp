@@ -6,7 +6,6 @@ class Animal {
 protected:
 	std::string	type;
 
-	Animal(std::string type);
 public:
 	/* Canonical */
 	Animal(void);
@@ -15,6 +14,7 @@ public:
 	Animal &	operator=(Animal const & rhs);
 
 	/* Specific */
+	Animal(std::string type);
 	virtual void	makeSound(void) const;
 	std::string		getType(void) const;
 };
