@@ -28,3 +28,7 @@ void		Cat::makeSound(void) const {
 std::string	Cat::getType(void) const {
 	return (this->type);
 }
+
+Brain		*Cat::getBrain(void) const {
+	return (this->brain);
+}

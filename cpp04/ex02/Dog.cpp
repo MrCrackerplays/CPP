@@ -28,3 +28,7 @@ void		Dog::makeSound(void) const {
 std::string	Dog::getType(void) const {
 	return (this->type);
 }
+
+Brain		*Dog::getBrain(void) const {
+	return (this->brain);
+}

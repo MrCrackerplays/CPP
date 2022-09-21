@@ -7,7 +7,7 @@ Brain::Brain(void) {
 Brain::Brain(Brain const & src) {
 	std::cout << "Brain Cloning... ";
 	for (int i = 0; i < 100; i++) {
-		this->idea[i] = src.idea[i];
+		this->ideas[i] = src.ideas[i];
 	}
 	std::cout << "Brain Cloned!" << std::endl;
 }
@@ -19,8 +19,16 @@ Brain::~Brain(void) {
 Brain &	Brain::operator=(Brain const & rhs) {
 	std::cout << "Brain Assigning... ";
 	for (int i = 0; i < 100; i++) {
-		this->idea[i] = rhs.idea[i];
+		this->ideas[i] = rhs.ideas[i];
 	}
 	std::cout << "Brain Assigned!" << std::endl;
 	return (*this);
+}
+
+std::string	Brain::getIdea(int i) const {
+	return (this->ideas[i]);
+}
+
+void	Brain::setIdea(int i, std::string idea) {
+	this->ideas[i] = idea;
 }
