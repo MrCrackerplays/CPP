@@ -5,6 +5,7 @@ class Character;
 
 class Character : public ICharacter {
 protected:
+	AMateria**	floor;
 	AMateria*	inventory[4];
 	std::string	name;
 public:
