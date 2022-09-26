@@ -3,16 +3,17 @@
 #include "WrongCat.hpp"
 #include "Brain.hpp"
 
-void check_deep_or_shallow_cat(Cat *cat, Cat *kitty) {
+void check_deep_or_shallow_cat(Cat *cat, Cat *kitty, bool opposite_idea = false) {
 	if (cat->getBrain() == kitty->getBrain()) {
 		std::cout << "Same brain, thus shallow copy" << std::endl;
 	} else {
 		std::cout << "Different brain, thus deep copy" << std::endl;
 	}
-	if (cat->getBrain()->getIdea(0) == kitty->getBrain()->getIdea(0))
-		std::cout << "Same first thought, correctly copied" << std::endl;
+	std::cout << ((cat->getBrain()->getIdea(0) == kitty->getBrain()->getIdea(0)) ? "Same" : "Different");
+	if ((cat->getBrain()->getIdea(0) == kitty->getBrain()->getIdea(0)) != opposite_idea)
+		std::cout << " first thought, correctly copied" << std::endl;
 	else
-		std::cout << "Different first thought, wrongly copied" << std::endl;
+		std::cout << " first thought, wrongly copied" << std::endl;
 }
 
 void check_deep_or_shallow_dog(Dog *dog, Dog *doggo, bool opposite_idea = false) {
@@ -81,6 +82,9 @@ int	main() {
 		check_deep_or_shallow_cat(c2, c4);
 		check_deep_or_shallow_dog(d1, d3);
 		check_deep_or_shallow_dog(d2, d4);
+
+		c2->getBrain()->setIdea(0, "hunting");
+		check_deep_or_shallow_cat(c2, c4, true);//should no longer be the same thought, otherwise shallow copy
 		d2->getBrain()->setIdea(0, "rolling");
 		check_deep_or_shallow_dog(d2, d4, true);//should no longer be the same thought, otherwise shallow copy
 
