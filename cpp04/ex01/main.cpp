@@ -1,6 +1,5 @@
 #include "Dog.hpp"
 #include "Cat.hpp"
-#include "WrongCat.hpp"
 #include "Brain.hpp"
 
 void check_deep_or_shallow_cat(Cat *cat, Cat *kitty, bool opposite_idea = false) {
