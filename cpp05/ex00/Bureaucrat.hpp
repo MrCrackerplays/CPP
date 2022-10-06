@@ -6,13 +6,19 @@ protected:
 	const std::string	_name;
 	int					_grade;
 public:
-	/* Canonical */
 	Bureaucrat(std::string name);
 	Bureaucrat(Bureaucrat const & src);
+
 	~Bureaucrat(void);
+
 	Bureaucrat &	operator=(Bureaucrat const & rhs);
 
-	/* Specific */
+	const std::string	getName(void) const;
+	int					getGrade(void) const;
+	void				setGrade(int grade);
+	void				increaseGrade(void);
+	void				decreaseGrade(void);
+
 	class GradeTooHighException : public std::exception {
 		public:
 			const char* what() const throw();
@@ -21,11 +27,8 @@ public:
 		public:
 			const char* what() const throw();
 	};
-	const std::string	getName(void) const;
-	int					getGrade(void) const;
-	void				setGrade(int grade);
-	void				increaseGrade(void);
-	void				decreaseGrade(void);
+private:
+	Bureaucrat(void);
 };
 
 std::ostream& operator<<(std::ostream& out, const Bureaucrat& b1);
