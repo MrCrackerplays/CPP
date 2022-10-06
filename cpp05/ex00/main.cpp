@@ -6,7 +6,7 @@ int main() {
 	std::cout << "steve: " << steve << std::endl;
 	std::cout << "billy: " << billy << std::endl;
 	billy.setGrade(2);
-	billy.decreaseGrade();
+	billy.increaseGrade();
 	std::cout << "steve: " << steve << std::endl;
 	std::cout << "billy: " << billy << std::endl;
 	try
