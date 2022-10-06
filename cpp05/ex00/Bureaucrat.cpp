@@ -16,7 +16,6 @@ Bureaucrat &	Bureaucrat::operator=(Bureaucrat const & rhs) {
 	return (*this);
 }
 
-/* Specific */
 const char* Bureaucrat::GradeTooHighException::what() const throw() {
 	return ("That grade is too high");
 }
