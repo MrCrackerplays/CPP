@@ -32,7 +32,6 @@ Form &	Form::operator=(Form const & rhs) {
 	return (*this);
 }
 
-/* Specific */
 const char* Form::GradeTooHighException::what() const throw() {
 	return ("That grade is too high");
 }
