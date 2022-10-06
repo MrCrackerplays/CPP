@@ -11,7 +11,7 @@ int main() {
 
 	std::cout << "=======ShrubberyCreationForm=======" << std::endl;
 	Form *melon = new ShrubberyCreationForm("watermelon");
-	melon->beSigned(billy);
+	billy.signForm(*melon);
 	// billy.setGrade(140);
 	billy.executeForm(*melon);
 
@@ -19,7 +19,7 @@ int main() {
 	std::cout << "=======RobotomyRequest=======" << std::endl;
 	billy.setGrade(1);
 	RobotomyRequestForm cop = RobotomyRequestForm("Robo Cop");
-	cop.beSigned(billy);
+	billy.signForm(cop);
 	// billy.setGrade(50);
 	billy.executeForm(cop);
 
@@ -27,7 +27,7 @@ int main() {
 	std::cout << "=======PresidentialPardon=======" << std::endl;
 	billy.setGrade(1);
 	PresidentialPardonForm apology = PresidentialPardonForm("Brian David Gilbert");
-	apology.beSigned(billy);
+	billy.signForm(apology);
 	// billy.setGrade(10);
 	billy.executeForm(apology);
 }
