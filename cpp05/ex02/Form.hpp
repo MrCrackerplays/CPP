@@ -12,7 +12,7 @@ public:
 	Form(std::string name, int sign_grade, int execute_grade);
 	Form(Form const & src);
 
-	~Form(void);
+	virtual ~Form(void);
 
 	Form &	operator=(Form const & rhs);
 
