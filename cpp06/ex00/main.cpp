@@ -3,30 +3,30 @@
 
 void	cast_from_int(int value, char *c, double *d, float *f) {
 	// std::cout << "casting from int" << std::endl;
-	*c = (char) value;
-	*d = (double) value;
-	*f = (float) value;
+	*c = static_cast<char>(value);
+	*d = static_cast<double>(value);
+	*f = static_cast<float>(value);
 }
 
 void	cast_from_char(char value, int *i, double *d, float *f) {
 	// std::cout << "casting from char" << std::endl;
-	*i = (int) value;
-	*d = (double) value;
-	*f = (float) value;
+	*i = static_cast<int>(value);
+	*d = static_cast<double>(value);
+	*f = static_cast<float>(value);
 }
 
 void	cast_from_double(double value, char *c, int *i, float *f) {
 	// std::cout << "casting from double" << std::endl;
-	*c = (char) value;
-	*i = (int) value;
-	*f = (float) value;
+	*c = static_cast<char>(value);
+	*i = static_cast<int>(value);
+	*f = static_cast<float>(value);
 }
 
 void	cast_from_float(float value, char *c, int *i, double *d) {
 	// std::cout << "casting from float" << std::endl;
-	*c = (char) value;
-	*i = (int) value;
-	*d = (double) value;
+	*c = static_cast<char>(value);
+	*i = static_cast<int>(value);
+	*d = static_cast<double>(value);
 }
 
 int	main(int argc, char **argv) {
