@@ -9,7 +9,7 @@ static bool	isOperator(char c) {
 RPN::RPN(const std::string string) : _string(string) {
 	if (string.empty() || string.size() % 2 == 0) {
 		std::cerr << "Error" << std::endl;
-		exit(1);
+		std::exit(1);
 	}
 	int	opcount = 0;
 	int	numcount = 0;
@@ -21,16 +21,16 @@ RPN::RPN(const std::string string) : _string(string) {
 				numcount++;
 			} else {
 				std::cerr << "Error" << std::endl;
-				exit(1);
+				std::exit(1);
 			}
 		} else if (string[i] != ' ') {
 			std::cerr << "Error" << std::endl;
-			exit(1);
+			std::exit(1);
 		}
 	}
 	if (opcount != numcount - 1) {
 		std::cerr << "Error" << std::endl;
-		exit(1);
+		std::exit(1);
 	}
 }
 
@@ -44,7 +44,7 @@ void	RPN::solve(void) const {
 		} else {
 			if (stack.size() < 2) {
 				std::cerr << "Error" << std::endl;
-				exit(1);
+				std::exit(1);
 			}
 			int	b = stack.top();
 			stack.pop();
@@ -66,7 +66,7 @@ void	RPN::solve(void) const {
 			
 			default:
 				std::cerr << "Error" << std::endl;
-				exit(1);
+				std::exit(1);
 				break;
 			}
 			stack.push(a);
@@ -74,7 +74,7 @@ void	RPN::solve(void) const {
 	}
 	if (stack.size() != 1) {
 		std::cerr << "Error" << std::endl;
-		exit(1);
+		std::exit(1);
 	}
 	std::cout << stack.top() << std::endl;
 }
