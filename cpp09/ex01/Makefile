@@ -1,15 +1,15 @@
-NAME := span
+NAME := RPN
 CC := c++
 
 CFLAGS ?= -Wall -Werror -Wextra -std=c++98 -Wshadow -Wno-shadow
 ifdef DEBUG
 CFLAGS := -g $(CFLAGS)
 endif
-OBJECTS := main.o
+OBJECTS := main.o RPN.o
 OBJECTS := $(addprefix obj/,$(OBJECTS))
 #INCLUDE := headers
 #INCLUDE := $(addprefix -I,$(INCLUDE))
-HEADER_FILES := MutantStack.hpp
+HEADER_FILES := RPN.hpp
 #HEADER_FILES := $(addprefix headers/,$(HEADER_FILES))
 
 all: $(NAME)
@@ -33,7 +33,7 @@ re: fclean all
 bonus: all
 
 run: all
-	./$(NAME)
+	./$(NAME) "1 1 +"
 
 debug:
 	$(MAKE) DEBUG=1
