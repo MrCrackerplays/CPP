@@ -33,7 +33,7 @@ re: fclean all
 bonus: all
 
 run: all
-	./$(NAME) "1 1 +"
+	./$(NAME) 9 7 5 3 1 0 2 4 6 8
 
 debug:
 	$(MAKE) DEBUG=1

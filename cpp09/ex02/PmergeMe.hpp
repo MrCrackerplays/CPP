@@ -1,15 +1,9 @@
 #ifndef PMERGEME_HPP
 # define PMERGEME_HPP
+# include <vector>
+# include <deque>
 
-class PmergeMe {
-protected:
-	/*Attributes*/
-public:
-	PmergeMe(/*Args*/);
-	PmergeMe(PmergeMe const & src);
+void	sortDeque(std::deque<unsigned long> &de, int p, int r);
+void	sortVector(std::vector<unsigned long> &ve, int p, int r);
 
-	~PmergeMe(void);
-
-	PmergeMe & operator=(PmergeMe const & rhs);
-};
 #endif
