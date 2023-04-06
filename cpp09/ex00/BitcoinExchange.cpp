@@ -28,7 +28,7 @@ BitcoinExchange::~BitcoinExchange(void) {
 }
 
 double	BitcoinExchange::getClosestPrice(BitcoinExchange::Date const & date) {
-	std::deque<std::pair<BitcoinExchange::Date, double> >::reverse_iterator	rit;
+	std::list<std::pair<BitcoinExchange::Date, double> >::reverse_iterator	rit;
 	for (rit = this->_history.rbegin(); rit != this->_history.rend(); rit++) {
 		if (rit->first <= date)
 			return rit->second;

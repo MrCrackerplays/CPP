@@ -1,7 +1,7 @@
 #ifndef BITCOINEXCHANGE_HPP
 # define BITCOINEXCHANGE_HPP
 # include <string>
-# include <deque>
+# include <list>
 # define DATA_FILE "data.csv"
 
 class BitcoinExchange {
@@ -24,7 +24,7 @@ public:
 		Date & operator=(Date const & rhs);
 	};
 protected:
-	std::deque<std::pair<BitcoinExchange::Date, double> >	_history;
+	std::list<std::pair<BitcoinExchange::Date, double> >	_history;
 public:
 	BitcoinExchange(void);
 
